@@ -36,12 +36,12 @@ const Events = (props) => {
       };
 
       const rspEvents = await axios.get(
-        'http://linija.duckdns.org/domus/api/event',
+        'https://linija.duckdns.org/domus/api/event',
         config
       );
 
       const rspEventTypes = await axios.get(
-        'http://linija.duckdns.org/domus/api/eventType',
+        'https://linija.duckdns.org/domus/api/eventType',
         config
       );
 

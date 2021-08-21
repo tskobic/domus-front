@@ -34,12 +34,12 @@ const Ads = () => {
       };
 
       const rspAds = await axios.get(
-        'https://linija.duckdns.org/domus/api/ad',
+        'http://linija.duckdns.org/domus/api/ad',
         config
       );
 
       const rspAdTypes = await axios.get(
-        'https://linija.duckdns.org/domus/api/adType',
+        'http://linija.duckdns.org/domus/api/adType',
         config
       );
 

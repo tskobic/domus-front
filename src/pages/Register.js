@@ -26,7 +26,7 @@ const Register = () => {
   useEffect(() => {
     const fetchDormitories = async () => {
       const agent = new https.Agent({ rejectUnauthorized: false });
-      const rsp = await axios.get('https://linija.duckdns.org/domus/api/dormitory', agent);
+      const rsp = await axios.get('http://linija.duckdns.org/domus/api/dormitory', agent);
       const list = await rsp.data;
       setDormitories(list);
     };
@@ -77,7 +77,7 @@ const Register = () => {
             ) => {
               console.log(values);
               const response = axios
-                .post('https://linija.duckdns.org/domus/api/authenticate/register', values)
+                .post('http://linija.duckdns.org/domus/api/authenticate/register', values)
                 .then((text) => {
                   console.log(values);
                   console.log(text.data);

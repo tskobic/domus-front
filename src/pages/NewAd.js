@@ -28,7 +28,7 @@ const NewAd = () => {
       };
 
       const rsp = await axios.get(
-        'https://linija.duckdns.org/domus/api/adType',
+        'http://linija.duckdns.org/domus/api/adType',
         config
       );
 
@@ -78,7 +78,7 @@ const NewAd = () => {
               data.userId = localStorage.getItem('id');
 
               const response = axios
-                .post('https://linija.duckdns.org/domus/api/ad', data, config)
+                .post('http://linija.duckdns.org/domus/api/ad', data, config)
                 .then((text) => {
                   navigate('/app/ads', { replace: true });
                 })

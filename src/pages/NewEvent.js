@@ -28,7 +28,7 @@ const NewEvent = () => {
       };
 
       const rsp = await axios.get(
-        'https://linija.duckdns.org/domus/api/eventType',
+        'http://linija.duckdns.org/domus/api/eventType',
         config
       );
 
@@ -103,7 +103,7 @@ const NewEvent = () => {
               data.dormitoryId = localStorage.getItem('dormitoryId');
 
               const response = axios
-                .post('https://linija.duckdns.org/domus/api/event', data, config)
+                .post('http://linija.duckdns.org/domus/api/event', data, config)
                 .then((text) => {
                   navigate('/app/events', { replace: true });
                 })
